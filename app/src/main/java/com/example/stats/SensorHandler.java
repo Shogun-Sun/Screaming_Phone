@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.widget.TextView;
+import kotlinx.coroutines.scheduling.WorkQueueKt;
 
 public class SensorHandler implements SensorEventListener {
     private Context mContext;
@@ -36,12 +37,14 @@ public class SensorHandler implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            mXValueText.setText(String.format("%1.3f", event.values[SensorManager.DATA_X]));
-            mYValueText.setText(String.format("%1.3f", event.values[SensorManager.DATA_Y]));
-            mZValueText.setText(String.format("%1.3f", event.values[SensorManager.DATA_Z]));
+            mXValueText.setText(String.format("X:  " + "%1.3f", event.values[SensorManager.DATA_X]));
+            mYValueText.setText(String.format("Y:  " + "%1.3f", event.values[SensorManager.DATA_Y]));
+            mZValueText.setText(String.format("Z:  " + "%1.3f", event.values[SensorManager.DATA_Z]));
 
-            if (event.values[SensorManager.DATA_Y] <= -13) {
-                    new Work().start(mContext);
+            if (event.values[SensorManager.DATA_Y] <= -17) {
+                if(Work.is_playing != true) {
+                    Work.start(mContext);
+                }
             }
         }
     }

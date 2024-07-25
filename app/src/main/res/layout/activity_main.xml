@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/TableLayout01"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -9,29 +11,7 @@
         android:id="@+id/row_force"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"/>
-
-    <TableRow
-        android:id="@+id/row_x"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dip">
-
-        <TextView
-            android:id="@+id/label_x"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="X:" />
-
-        <TextView
-            android:id="@+id/value_x"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dip"
-            android:layout_weight="1"
-            android:text="-" />
-    </TableRow>
+        android:layout_margin="5dip" />
 
     <TableRow
         android:id="@+id/row_y"
@@ -39,20 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dip">
 
-        <TextView
-            android:id="@+id/label_y"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="Y:" />
-
-        <TextView
-            android:id="@+id/value_y"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dip"
-            android:layout_weight="1"
-            android:text="-" />
     </TableRow>
 
     <TableRow
@@ -61,20 +27,50 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dip">
 
-        <TextView
-            android:id="@+id/label_z"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="Z:" />
-
-        <TextView
-            android:id="@+id/value_z"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dip"
-            android:layout_weight="1"
-            android:text="-" />
     </TableRow>
-</TableLayout>
+
+    <TextView
+        android:id="@+id/value_z"
+        android:layout_width="241dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="644dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value_y"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/value_y"
+        android:layout_width="241dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="677dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/value_x"
+        android:layout_width="241dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/value_y"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
