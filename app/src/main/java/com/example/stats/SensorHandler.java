@@ -7,7 +7,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.widget.TextView;
-import kotlinx.coroutines.scheduling.WorkQueueKt;
+
+import java.io.IOException;
 
 public class SensorHandler implements SensorEventListener {
     private Context mContext;
@@ -44,6 +45,7 @@ public class SensorHandler implements SensorEventListener {
             if (event.values[SensorManager.DATA_Y] <= -17) {
                 if(Work.is_playing != true) {
                     Work.start(mContext);
+
                 }
             }
         }

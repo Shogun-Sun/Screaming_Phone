@@ -20,13 +20,11 @@ public class Work {
         sirSound = MediaPlayer.create(context, R.raw.sound);
         long sec = sirSound.getDuration();
         sirSound.start();
-        Log.i("Work","I AM CALLED! ");
         TimerTask task = new TimerTask() {
             public void run() {
                 is_playing = false;
                 timer.cancel();
                 timer.purge();
-                Log.i("Work","END!");
             }
         };
         timer.schedule(task, sec, 1);

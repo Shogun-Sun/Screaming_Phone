@@ -33,7 +33,7 @@
         android:id="@+id/value_z"
         android:layout_width="241dp"
         android:layout_height="19dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="84dp"
         android:layout_marginBottom="644dp"
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,7 @@
         android:id="@+id/value_y"
         android:layout_width="241dp"
         android:layout_height="17dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="37dp"
         android:layout_marginBottom="677dp"
         android:layout_weight="1"
@@ -58,7 +58,7 @@
         android:id="@+id/value_x"
         android:layout_width="241dp"
         android:layout_height="18dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/value_y"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +71,35 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
+
+    <ImageView
+        android:id="@+id/your_file"
+        android:layout_width="312dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="142dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="413dp"
+        android:src="@drawable/uploadfiles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="343dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
